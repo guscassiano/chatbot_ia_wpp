@@ -73,7 +73,13 @@ src/chatbot/
 
 ## Configuração
 
-1. Clone o repositório e crie o arquivo `.env` na raiz com as seguintes variáveis:
+1. Clone o repositório e crie o arquivo `.env` na raiz a partir do template:
+
+```bash
+cp .env.example .env
+```
+
+Depois edite o `.env` preenchendo suas credenciais. As variáveis estão agrupadas por seção (OpenAI, RAG, Evolution API, Redis e Buffer) com comentários explicativos no próprio arquivo.
 
 ```env
 # OpenAI
@@ -126,7 +132,7 @@ docker compose up -d
 ```bash
 curl -X POST http://localhost:8080/instance/create \
   -H "Content-Type: application/json" \
-  -H "apikey: @1B2c3d4" \
+  -H "apikey: sua-apikey-global" \
   -d '{"instanceName": "sua-instancia", "qrcode": true, "integration": "WHATSAPP-BAILEYS"}'
 ```
 
