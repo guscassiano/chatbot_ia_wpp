@@ -4,10 +4,17 @@ __pycache__/
 build/
 dist/
 wheels/
-*.egg-info
+*.egg-info/
 
 # Virtual environments
 .venv
 
-# annotations
-*.txt
+# Environments
+.env
+
+# Annotations
+annotations.txt
+
+# Project dir
+rag_files/
+.vscode
